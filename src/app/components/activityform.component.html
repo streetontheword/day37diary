@@ -1,0 +1,23 @@
+<h1>Hello</h1>
+<form [formGroup]="form" (submit)="process()">
+<table>
+    <tr>
+        <td>Date: </td>
+        <td><input type="date" formControlName="date"></td>
+    </tr>
+    <tr>
+        <td>Text: </td>
+        <td><input type="text" formControlName="text"></td>
+    </tr>
+    <tr>
+        <td>Type: </td>
+        <td><input type="radio" value="Travel" formControlName="type">Travel
+        <input type="radio" value="Romance" formControlName="type">Romance
+        <input type="radio" value="Weekend" formControlName="type">Weekend
+        <input type="radio" value="Hobbies" formControlName="type">Hobbies
+        </td>
+    </tr>
+    <button type="submit" [disabled]="form.invalid">Add</button>
+</table>
+
+</form>

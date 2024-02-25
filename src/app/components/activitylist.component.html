@@ -1,0 +1,23 @@
+<h2>Things I want to do </h2>
+<div *ngIf="response$ | async as response">
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Text</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let r of response">
+          <td>{{ r.date }}</td>
+          <td>{{ r.text }}</td>
+          <td>{{ r.type }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+<ng-template #nothingtodo>
+    <h2>Why are you so free</h2>
+</ng-template>

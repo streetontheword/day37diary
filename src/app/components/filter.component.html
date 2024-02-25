@@ -1,0 +1,14 @@
+
+<div *ngIf="cat$ | async as response">
+<div >
+    <select (change)="filter($event)" >
+        <!-- <option value="Travel">Travel</option>
+        <option value="Romance">Romance</option>
+        <option value="Weekend">Weekend</option>
+        <option value="Hobbies">Hobbies</option> -->
+        <option *ngFor="let r of response" [value]="r">
+            {{r}}
+        </option>
+    </select>
+    </div>
+</div>
